@@ -24,6 +24,7 @@ function App() {
             <Route path="/param/:id/:name" element={<Param1 />}/>
             <Route path="/param" element={<Param2 />}/>
             <Route path="/param3/:id/:pw" element={<Param3 />}/>
+            {/* 경로상으로 "/param/:id/:name"  "/param/:id/:pw" 인식 구별 못함 -> 이름을 바꿔야한다. */}
           </Routes>
         <Footer />
       </BrowserRouter>

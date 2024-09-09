@@ -8,13 +8,20 @@ const Comp3 = () => {
     // (1) path variable :비동기  /comp3/12
     // (2) queryString :동기  /comp3?id=12&name=12
 
-    const [ id, setId ] = useState();
-    const [ pw, setPw ] = useState();
+    const [ id, setId ] = useState('');
+    const [ pw, setPw ] = useState('');
     
     return (
         <div className='comp3 comp'>
             <h3>Comp3 영역입니다.</h3>
 
+            {/* id/pw 입력받고 전송버튼을 클릭하여 Param3.jsx에 출력 */}
+            <input type="text" name='id' value={id} onChange={(e)=>(setId(e.target.value))}/>
+            <input type="text" name='pw' value={pw} onChange={(e)=>(setPw(e.target.value))}/>  
+            <Link to={{pathname: `/param3/${id}/${pw}`}}>id/pw 전송</Link>
+
+
+            <br /><br /><br /><hr />
             <Link to='/param/15/kim'>path variable</Link>
 
             <br /><br /><br /><hr />
@@ -31,16 +38,9 @@ const Comp3 = () => {
                 }
             }>queryString params</Link>
 
-            <br /><br /><br /><hr />
-            {/* id/pw 입력받고 전송버튼을 클릭하여 Param3.jsx에 출력 */}
-            <input type="text" name='id' value={id} onChange={e=>(setId(e.target.value))}/>
-            <input type="text" name='pw' value={pw} onChange={e=>(setPw(e.target.value))}/>  
-            <Link to={
-                {
-                    pathname: '/param3',
-                    search: {id} / {pw}
-                }
-            }>id/pw 전송</Link>
+            
+            
+
         </div>
     );
 };
