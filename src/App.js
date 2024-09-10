@@ -1,15 +1,15 @@
 import "./App.css";
 import React from "react";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Footer from "./components/Footer";
+import Header from "./component/Header";
+import Home from "./component/Home";
+import Footer from "./component/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Comp1 from "./components/Comp1";
-import Comp2 from "./components/Comp2";
-import Comp3 from "./components/Comp3";
-import Param1 from "./components/Param1";
-import Param2 from "./components/Param2";
-import Param3 from "./components/Param3";
+import Comp1 from "./component/Comp1";
+import Comp2 from "./component/Comp2";
+import Comp3 from "./component/Comp3";
+import Param1 from "./component/Param1";
+import Param2 from "./component/Param2";
+import Param3 from "./component/Param3";
 
 function App() {
   return (
